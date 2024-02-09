@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        *{
+            padding: 0%;
+            
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0%;
+        }
+        body {
+            
+           border: 0%;
+           padding: 0%;
+        }
+
+        header {
+            text-align: center;
+            background-color: #FF9A6C;
+            padding: 5em;
+            
+        }
+
+        #receitas {
+            background-color:#f8ae8b;
+            padding: 1em;
+            text-align: center;
+            margin: auto;  
+
+        }
+
+        #receitas ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            
+        }
+        
+        #receitas ul li {
+            margin-bottom: 10px;
+            
+        }
+
+        #receitas ul li a {
+            text-decoration: none;
+            color: black;
+            background-color: #f55b47;
+            box-shadow: 0 0 3rem #f55b47;
+            padding: 8px 16px;
+            border-radius: 5px;
+            display: block;
+            font-size: x-large;
+            max-width: 600px;
+            margin: auto;
+            position: relative;
+        }
+
+       /* #receitas ul li a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            border: 2px solid black;
+            box-sizing: border-box;
+            border-radius: 5px;
+            animation: moveBorder 4s linear infinite;
+        }
+        
+        @keyframes moveBorder {
+            0% {
+                width: 0;
+            }
+            25% {
+                width: 100%;
+                left: 0;
+            }
+            50% {
+                width: 0;
+                left: 100%;
+            }
+            75% {
+                width: 100%;
+                left: 0;
+            }
+            100% {
+                width: 0;
+            }
+        }*/
+        footer {
+            text-align: center;
+            
+            background-color: #ff8373;
+            padding: 1em;
+            width: auto;
+            border: 0%;
+            font-weight: 700;
+
+        }
+        #portal button {
+            background-color: #f55b47;
+            border: none;
+            border-radius: 8px;
+            color: #000000;
+            padding: 5px 7px;
+            font-size: larger;  
+            margin: 5px;
+            cursor: pointer;
+            
+}
+
+#portal a {
+    text-decoration: none;
+    color: #000000;
+}
+    </style>
+    <title>Acesso às Receitas</title>
+</head>
+<body>
+    <header>
+        <h1>Acesso às Receitas</h1>
+        <h2>Se você chegou até aqui, é porque está prestes a desvendar o delicioso 
+            universo das nossas receitas! Prepare-se para uma jornada 
+            gastronômica repleta de sabores irresistíveis. Clique nos links abaixo e 
+            deixe-se guiar pelo passo a 
+            passo de cada prato. Afinal, a arte da culinária está a apenas um clique de 
+            distância. Bom apetite e aproveite cada descoberta!</h2>
+    </header>
+
+    <nav id="receitas">
+        <ul>
+            <li><a href="{% url 'receita1' %}">Pão de batata</a></li>
+            <li><a href="{% url 'receita2' %}">Pão de forma</a></li>
+            <li><a href="{% url 'receita3' %}">Foccacia</a></li>
+            <li><a href="{% url 'receita4' %}">Pão pita</a></li>
+            <li><a href="{% url 'receita5' %}">Bolo de chocolate</a></li>
+            <li><a href="{% url 'receita6' %}">Bolo de cenoura</a></li>
+            <li><a href="{% url 'receita7' %}">Bolo de banana</a></li>
+            <li><a href="{% url 'receita8' %}">Bolo de limão</a></li>
+            <li><a href="{% url 'receita9' %}">Pizza</a></li>
+            <li><a href="{% url 'receita10' %}">Pão francês</a></li>
+            <li><a href="{% url 'receita11' %}">Panqueca</a></li>
+            <li><a href="{% url 'receita12' %}">Panqueca americana</a></li>
+            <li><a href="{% url 'receita13' %}">Pão italiano</a></li>
+            <li><a href="{% url 'receita14' %}">Bolo de laranja</a></li>
+            <li><a href="{% url 'receita15' %}">Cookies</a></li>
+            <li><a href="{% url 'receita16' %}">Brownie</a></li>
+            <li><a href="{% url 'receita17' %}">Bolo indiano</a></li>
+            <li><a href="{% url 'receita18' %}">Bolo amélia</a></li>
+            <li><a href="{% url 'receita19' %}">Pão de cebola</a></li>
+            <li><a href="{% url 'receita20' %}">Donuts</a></li>
+            <li><a href="{% url 'receita21' %}">Sorvete de Ninho trufado</a></li>
+            <li><a href="{% url 'receita22' %}">Pastel de forno</a></li>
+
+        </ul>
+    </nav>
+
+    <footer>
+        <p>&copy; 2024 Catálogo de Receitas</p>
+        <br>
+            <p> Feito por André</p>
+            <nav id="portal">
+        <ul>
+            <br>
+        <li><button id="botao14" type="submit"><a href="/receitas/home">Retorne ao Portal do catálogo</a></button></li>
+        </ul>
+    </nav>
+    </footer>
+</body>
+</html>
+

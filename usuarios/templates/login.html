@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de receitas</title>
+    
+    <link rel="icon" type="image/x-icon" href="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/logohtmlcss2.png?v=1703268113843">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333; /* Fundo escuro */
+            color: #fff; /* Cor do texto */
+        }
+        
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #555; /* Cor de fundo mais escura */
+            border-radius: 10px;
+        }
+        
+        .box-titulo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .box-titulo-item {
+            text-align: center;
+        }
+        
+        .divisor {
+            border: none;
+            border-top: 1px solid #888; /* Cor da linha divisória */
+            margin-top: 10px;
+        }
+        
+        .tac {
+            text-align: center;
+        }
+        
+        .box-form {
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        /* Formulário menor e alinhado à direita */
+        .box-form form {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        
+        .input-form {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #888; /* Cor da borda do input */
+            border-radius: 5px;
+            background-color: #666; /* Cor de fundo do input */
+            color: #fff; /* Cor do texto dentro do input */
+        }
+        
+        .btn-cadastro {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .btn-cadastro:hover {
+            background-color: #0056b3;
+        }
+        
+        h4, h3 {
+            text-align: center;
+            margin-top: 10px;
+        }
+        
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .alert {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        
+        .alert.success {
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+            color: #155724;
+        }
+        
+        .alert.error {
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+            color: #721c24;
+        }
+        
+            .password-icon {
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                cursor: pointer;
+            }
+    </style>
+</head>
+<body>
+    <div class="bg1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <div class="box-titulo">
+                        <div class="box-titulo-item">
+                           <h3>Catálogo de receitas</h3>
+                        </div>
+                        <div class="box-titulo-item">
+                            
+                        </div>
+                    </div>
+                    <hr class="divisor">
+                    <br>
+                    <div class="tac">
+                        <h4 style="font-size: 30px">Sua plataforma online<br> de receitas</h4>
+                    </div>
+                    
+                </div>
+                <div class="col-md">
+                    
+                    <div class="box-form">
+                        <div class="box-circle">
+                            <div class="circle c1"></div>
+                            <div class="circle c2"></div>
+                            <div class="circle c3"></div>
+                        </div>
+                        
+                        <h3>Logar</h3>
+                        {% if messages %}
+                            {% for message in messages %}
+                                <section class="alert {{message.tags}}">
+                                    {{message}}
+                                </section>
+                            {% endfor %}
+                        {% endif %}
+                        <form action="{% url 'login' %}" method="POST">{% csrf_token %}
+                            <label>Username</label>
+                            <input type="text" class="input-form" name="username" id="">
+                            <br>
+                            <br>
+                            <label>Senha</label>
+                            <input type="password" class="input-form" name="senha" id="" >
+                            <i class="fas fa-eye" id="eye" onclick="showPassword()"></i>
+                            <i class="fas fa-eye-slash" id="eye-slash" onclick="showPassword()"></i>
+                            <br>
+                            <br>
+                            <input type="submit" value="Enviar" class="btn-cadastro">
+                            <br>
+                            <br>
+                            <h4>Não tem uma conta? <a href="/usuarios/cadastro/">Cadastre-se</a></h4>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<!--<script src="https://kit.fontawesome.com/65aa8d9fd8.js" crossorigin="anonymous"></script>
+<script>
+    function showPassword() {
+        const eye = document.getElementById('eye');
+        const eyeSlash = document.getElementById('eye-slash');
+        const fieldPassword = document.getElementById('field password')
+        
+        if(eye.style.display === 'none') {
+            eye.style.display = 'block';
+            eyeSlash.style.display = 'none';
+            fieldPassword.type = 'text';
+        } else {
+            eye.style.display = 'none';
+            eyeSlash.style.display = 'block';
+            fieldPassword.type = 'password';
+        }
+        };
+</script>-->
+</html>
+
+    
+    
+
+
+
+   

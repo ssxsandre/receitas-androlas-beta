@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="stylesheet" href="style.css">-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon"
+    type="image/x-icon"
+    href="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/logohtmlcss2.png?v=1703268113843">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Montserrat', serif;
+        }
+
+        body {
+            font-family: 'Arial', serif;
+            background-color: #e4c333;
+        }
+        header {
+            text-align: center;
+            background-color: #FF9A6C;
+            display: flex;
+            align-items: left;
+            justify-content: space-between;
+            padding-left: 80px;
+            padding-right: 80px;
+            padding-top: 4px;
+            padding-bottom: 24px;
+        }
+
+            header h1 {
+                margin-bottom: 8px;
+            }
+
+            header a {
+                color: #FFFFFF;
+                font-weight: 600;
+                /*topo, direita, baixo, esquerda*/
+                padding: 40px 0px 0px 0px;
+                text-decoration: none;
+                font-size: large;
+            }
+
+        /*header h1 {
+                    margin-bottom: 8px; 
+                }
+        header {
+            text-align: center;
+            background-color:#FF9A6C;
+            background-color:#FF9A6C;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 80px;
+            padding-right: 80px;
+            padding-top: 4px;
+            padding-bottom: 24px;
+}
+        header a{
+            color: #FFFFFF;
+            font-weight: 600;
+            padding:32px;
+            text-decoration: none;
+        }
+        
+       /* #botoes-1-a-8 {
+            display: flex;
+            gap: 32px;
+            padding: 4px 0;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            list-style: none;
+            margin: 0;
+            text-align: center;
+        }
+       #botoes-1-a-8,
+        #botoes-9 {
+            display: flex;
+            gap: 32px;
+            padding: 4px 0;
+            position: relative;
+            list-style: none;
+            margin: 0;
+            top: 0px;
+            text-align: center;
+        }
+
+        #botoes-1-a-8 li,
+        #botoes-9 li {
+            margin-bottom: 10px;
+        }*/
+
+        #sugestao {
+            background-color: #FF725E;
+            border: none;
+            border-radius: 8px;
+            color: #FFFFFF;
+            padding: 5px 4px;
+            font-size: 20px;
+            margin: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        /*#botoes-1-a-8 a,
+        #botoes-9 a {
+            text-decoration: none;
+            color: #FFFFFF;
+        }
+
+        #botoes-9 {
+            margin-left: auto;
+            display: flex;
+            gap: 32px;
+            padding: 4px 0px 0px 0px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            list-style: none;
+            margin: 0;
+            text-align: center;
+            }   */
+            #image-section {
+                display: flex;
+                justify-content: space-around;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                background-color: #ff6600;
+                padding: 20px 0px 1px 2px;
+                margin-top: 20px; /* Adiciona espaço entre o título e as imagens */
+            }
+
+            #image-section img {
+                width: 160px;
+                max-width: 160px;
+                height: 160px;
+                max-height: 160px;
+                border-radius: 8px;
+                margin-bottom: 10px; /* Adiciona espaço entre as imagens */
+            }
+            #descricao{
+                font-weight: 800;
+            }
+            .header-link {
+    color: #FFFFFF;
+    font-weight: 600;
+    /*topo, direita, baixo, esquerda*/
+    padding: 40px 0px 0px 0px;
+    text-decoration: none;
+    font-size: large;
+    display: block;
+    margin-bottom: 20px; /* Adicione uma margem inferior para espaçamento entre os botões */
+}
+
+
+       /* #menu ul {
+            list-style: none;
+        }
+        #menu2 ul {
+            list-style: none;
+        }*/
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            background-color: #e4c333;
+            padding: 1px 1px 1px 1px;
+            width: 100%;
+        }
+        #botaoacesso {
+            
+            background-color: #f55b47;
+            border: none;
+            border-radius: 8px;
+            color: #000000;
+            /*topo, direita, baixo, esquerda*/
+            padding: 5px 4px;
+            font-size: 30px;
+            font-weight: 800;
+            margin: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            align-items: center;
+
+        }
+        #receitas {
+            text-align: center;
+        }
+        #sugestao button {
+            background-color: #f55b47;
+            border: none;
+            border-radius: 8px;
+            color: #000000;
+            padding: 5px 4px;
+            font-size: 20px;
+            margin: 5px;
+            cursor: pointer;
+}
+
+#sugestao a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 900;
+}
+#sugestoes {
+    align-items: center;
+}
+    </style>
+    <title>Catálogo de Receitas</title>
+
+</head>
+
+<body>
+    <header>
+        <h1>Seja bem-vindo ao meu <br>Catálogo de Receitas </h1>
+        <a href="#descricao">Sobre o catálogo</a>
+        <a href="#image-section">Imagens</a>
+        <a href="#receitas">Acesso às receitas</a>
+        
+        
+
+</header>
+        
+       <!-- <section id="botoes-1-a-8">
+           <nav id="menu">
+            <ul>
+                <li><button id="botao1" type="submit"><a href="receita1.html">Pão de batata</a></button></li>
+                <li><button id="botao2" type="submit"><a href="receita2.html">Pão de forma</a></button></li>
+                <li><button id="botao3" type="submit"><a href="receita3.html">Foccacia</a></button></li>
+                <li><button id="botao4" type="submit"><a href="receita4.html">Pão pita</a></button></li>
+                <li><button id="botao5" type="submit"><a href="receita5.html">Bolo de chocolate</a></button></li>
+                <li><button id="botao6" type="submit"><a href="receita6.html">Bolo de cenoura</a></button></li>
+                <li><button id="botao7" type="submit"><a href="receita7.html">Bolo de banana</a></button></li>
+                
+            </ul>
+        </nav>
+        </section>
+        <section id="botoes-9">
+           <nav id="menu2">
+            <ul>
+                <li><button id="botao8" type="submit"><a href="receita8.html">Bolo de limão</a></button></li>
+                <li><button id="botao9" type="submit"><a href="receita9.html">Pizza</a></button></li>
+                <li><button id="botao10" type="submit"><a href="receita10.html">Pão francês</a></button></li>
+                <li><button id="botao11" type="submit"><a href="receita11.html">Panqueca</a></button></li>
+                <li><button id="botao12" type="submit"><a href="receita12.html">Panqueca americana</a></button></li>
+                <li><button id="botao13" type="submit"><a href="receita13.html">Pão italiano </a></button></li>
+             </ul>
+        </nav>
+        </section>-->
+    
+    <section id="descricao">
+        <h1>O que é esse catálogo?</h1>
+        <!--<p>Esse catálogo é uma lista das receitas que reuni e separei para compartilhar com vocês. </p>-->
+        <p>
+            Este catálogo é uma coleção dedicada de receitas caseiras que compilei especialmente para compartilhar com vocês. 
+            Explore uma variedade encantadora de pratos, desde diversos tipos de pães até bolos irresistíveis e panquecas deliciosas. Cada receita é uma jornada pela culinária caseira, 
+            oferecendo uma experiência única e cheia de sabor. Das clássicas refeições acolhedoras a deliciosas sobremesas, este catálogo é um 
+            convite para transformar sua cozinha em um verdadeiro laboratório de criação gastronômica. Sinta-se em casa enquanto navega por estas
+             receitas, repletas de amor, tradição e o prazer genuíno de compartilhar momentos à mesa. <br>Bem-vindo ao meu universo culinário, onde a
+              simplicidade se transforma em algo extraordinário, proporcionando a você uma jornada única por diversos pães, bolos irresistíveis e
+               panquecas deliciosas</p>
+    </section>
+    
+    <section id="image-section">
+        <div>
+            <h1>Imagens das receitas</h1>
+            <p>Explore nosso catálogo de receitas e deixe-se tentar pelas imagens irresistíveis de pães, bolos e panquecas. Cada foto 
+                é uma amostra visual do sabor caseiro que você pode trazer
+                 para a sua cozinha. Descubra inspiração culinária em cada imagem e transforme essas delícias em realidade</p>
+
+           <!-- <a class="botao" href="https://wa.me/5522992349141" target="_blank">Marque uma consulta</a>
+            <a class="botao-transparente" href="#teste">Conheça a nossa clínica</a>-->
+        </div>
+        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/pao_batata.jpg?v=1701451173346" alt="Imagem 1">
+        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/pao-de-forma.jpg?v=1701459247377" alt="Imagem 2">
+        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/Foccacia.jpg?v=1701459593890" alt="Imagem 3">
+        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/pao-pita.jpg?v=1701459250907" alt="Imagem 4">
+        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/bolo-chocolate.jpg?v=1701459590388" alt="Imagem 5">
+        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/bolo-cenoura.jpg?v=1701459583403" alt="Imagem 6">
+        <!--</section>
+        <section class="image-section2">-->
+        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/bolo-banana.jpg?v=1701459587462" alt="Imagem 7">
+        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/bolo-limao.jpg?v=1701533159550" alt="Imagem 8">
+        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/pizza2.jpg?v=1701559891097" alt="Imagem 9">
+        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/pao-frances.jpg?v=1701560903783" alt="Imagem 10">
+        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/panqueca.jpg?v=1701561496436" alt="Imagem 11">
+
+              <!-- <section class="image-section3">--> 
+        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/panqueca-americana.jpg?v=1701561972696" alt="Imagem 12">
+        
+        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/pao-italiano.jpg?v=1701721270264" alt="Imagem 13">
+        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/91896822_168757634249882_6340592912128928891_n.jpg?v=1704399498272" alt="Imagem 14"> 
+        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/cookie.jpg?v=1705162163081" alt="Imagem 15">
+        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/brownie.jpeg?v=1705162177053" alt="Brownie">
+        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/bolo-indiano.jpg?v=1705162187574" alt="Bolo indiano">
+        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/bolo-amelia.jpg?v=1705162196798" alt="Bolo amélia">
+        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/pao-de-cebola.jpeg?v=1705162216736" alt="Pão de cebola">
+        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/donut.jpg?v=1705162233152" alt="Donuts">
+        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/sorvete.jpg?v=1705162240098" alt="Sorvete de Ninho trufado">
+        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/pastel.jpg?v=1705171156649" alt="Pastel de forno">
+    </section>
+    <section id="receitas">
+        <h3>Agora, vamos ao que realmente interessa: as receitas que vão transformar seus momentos na cozinha em experiências incríveis. Para 
+            conferir cada detalhe delicioso, basta clicar nas imagens abaixo e se 
+            deliciar com o passo a passo de cada receita. Inspire-se na arte da culinária caseira e descubra sabores únicos ao alcance de um 
+            clique!</h3>
+            <a id="botaoacesso" href="/receitas/acesso">Acesso às receitas</a>
+    </section>
+    
+       
+        
+        <!-- Formulário de sugestão 
+        <form id="sugestaoForm">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+    </form>
+            <label for="sugestao">Sugestão:</label>
+            <textarea id="sugestao" name="sugestao" rows="4" required></textarea>
+    
+            Botão de envio do formulário -->
+            
+        <nav>
+        
+           
+            <!-- Adicione mais conforme necessário -->
+        
+    </nav>
+
+   <!-- <section class="recipe-container">
+        <div class="recipe">
+            <h2>Pão de Batata</h2>
+        </div>
+    </section> -->
+
+    <footer>
+        <p>&copy; 2024 Catálogo de Receitas</p>
+            <p> Feito por André</p>
+            <section id="sugestoes">
+        <h2>Deixe sua Sugestão abaixo</h2>
+            <button id="sugestao" type="submit"><a href="https://forms.gle/PKEHuBzvx3Nyd5VL8">Clique para preencher o formulário</a></button>
+        
+    </section>
+    </footer>
+
+    
+       <!-- </section>
+                dicione mais imagens conforme necessário -->
+   
+</body>
+</html>
