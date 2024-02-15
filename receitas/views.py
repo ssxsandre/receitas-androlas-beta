@@ -1,29 +1,17 @@
 from django.shortcuts import redirect, render
-from django.contrib import auth
-
+from django.contrib import auth, messages
+from .models import Receita
+from .forms import ReceitaForm, SugestaoForm
 from django.shortcuts import redirect, render
 from django.contrib import auth
 from django.urls import reverse
 
 def home(request):
-    if not request.user.is_authenticated:
-        # Se o usuário estiver autenticado, renderize a página inicial de receitas
-        return redirect('/usuarios/logar')
-    else:
-        # Se o usuário não estiver autenticado e não estiver na página de login,
-        # redirecione para a página de login
-        return render(request, 'home.html')
+    return render(request, 'home.html')
+        
     
 def acesso(request):
-    if not request.user.is_authenticated:
-        # Se o usuário estiver autenticado, renderize a página inicial de receitas
-        return redirect('/usuarios/logar')
-    else:
-        # Se o usuário não estiver autenticado e não estiver na página de login,
-        # redirecione para a página de login
-        return render(request, 'acesso.html')
-    
-    
+    return render(request, 'acesso.html')
 def receita1(request):
     return render(request, 'receitas_templates/receita1.html')
 
@@ -89,3 +77,44 @@ def receita21(request):
 
 def receita22(request):
     return render(request, 'receitas_templates/receita22.html')
+
+
+
+
+
+
+
+def adicionar_receita(request):
+    if not request.user.is_authenticated:
+        return redirect('/usuarios/logar')
+    else:
+        if request.method == 'POST':
+            form = ReceitaForm(request.POST)
+            if form.is_valid():
+                form.save()
+                messages.success(request, 
+                                """Receita adicionada com sucesso!
+                                 Em breve o administrador irá verificar sua receita e adicioná-la ao site! 
+                                 Certifique-se de verificar seu email: O administrador te enviará notícias por lá!""")
+                return redirect('adicionar_receita')
+        else:
+            form = ReceitaForm()
+        return render(request, 'receitas/adicionar_receita.html', {'form': form})
+
+def sugestao(request):
+    if not request.user.is_authenticated:
+        return redirect('/usuarios/logar')
+    else:
+        if request.method == "POST":
+            form = SugestaoForm(request.POST)
+            if form.is_valid():
+                messages.sucess(request,
+                                """Sugestão enviada com sucesso!
+                                 Em breve o administrador irá verificar sua sugestão e  tentar adicioná-la ao site! 
+                                 Certifique-se de verificar seu email: O administrador te enviará notícias por lá!""")
+                return redirect('sugestao')
+        else:
+            form = SugestaoForm()
+            return render(request, 'receitas/sugestao.html', {'form': form})
+            
+

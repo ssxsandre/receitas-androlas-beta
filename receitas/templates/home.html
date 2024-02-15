@@ -211,6 +211,27 @@
 #sugestoes {
     align-items: center;
 }
+#adicionar-receita-button {
+    text-align: center;
+    margin: 20px auto;
+}
+
+#adicionar-receita-button button {
+    background-color: #f55b47;
+    border: none;
+    border-radius: 8px;
+    color: #000000;
+    padding: 10px 20px;
+    font-size: larger;  
+    cursor: pointer;
+    font-weight: 700;
+}
+
+
+#adicionar-receita-button a {
+    text-decoration: none;
+    color: #000000;
+    }
     </style>
     <title>Catálogo de Receitas</title>
 
@@ -222,41 +243,9 @@
         <a href="#descricao">Sobre o catálogo</a>
         <a href="#image-section">Imagens</a>
         <a href="#receitas">Acesso às receitas</a>
-        
-        
-
 </header>
-        
-       <!-- <section id="botoes-1-a-8">
-           <nav id="menu">
-            <ul>
-                <li><button id="botao1" type="submit"><a href="receita1.html">Pão de batata</a></button></li>
-                <li><button id="botao2" type="submit"><a href="receita2.html">Pão de forma</a></button></li>
-                <li><button id="botao3" type="submit"><a href="receita3.html">Foccacia</a></button></li>
-                <li><button id="botao4" type="submit"><a href="receita4.html">Pão pita</a></button></li>
-                <li><button id="botao5" type="submit"><a href="receita5.html">Bolo de chocolate</a></button></li>
-                <li><button id="botao6" type="submit"><a href="receita6.html">Bolo de cenoura</a></button></li>
-                <li><button id="botao7" type="submit"><a href="receita7.html">Bolo de banana</a></button></li>
-                
-            </ul>
-        </nav>
-        </section>
-        <section id="botoes-9">
-           <nav id="menu2">
-            <ul>
-                <li><button id="botao8" type="submit"><a href="receita8.html">Bolo de limão</a></button></li>
-                <li><button id="botao9" type="submit"><a href="receita9.html">Pizza</a></button></li>
-                <li><button id="botao10" type="submit"><a href="receita10.html">Pão francês</a></button></li>
-                <li><button id="botao11" type="submit"><a href="receita11.html">Panqueca</a></button></li>
-                <li><button id="botao12" type="submit"><a href="receita12.html">Panqueca americana</a></button></li>
-                <li><button id="botao13" type="submit"><a href="receita13.html">Pão italiano </a></button></li>
-             </ul>
-        </nav>
-        </section>-->
-    
     <section id="descricao">
         <h1>O que é esse catálogo?</h1>
-        <!--<p>Esse catálogo é uma lista das receitas que reuni e separei para compartilhar com vocês. </p>-->
         <p>
             Este catálogo é uma coleção dedicada de receitas caseiras que compilei especialmente para compartilhar com vocês. 
             Explore uma variedade encantadora de pratos, desde diversos tipos de pães até bolos irresistíveis e panquecas deliciosas. Cada receita é uma jornada pela culinária caseira, 
@@ -311,39 +300,18 @@
             deliciar com o passo a passo de cada receita. Inspire-se na arte da culinária caseira e descubra sabores únicos ao alcance de um 
             clique!</h3>
             <a id="botaoacesso" href="/receitas/acesso">Acesso às receitas</a>
+            <br>
+            <br>
+            <div id="adicionar-receita-button">
+                <a href="{% url 'adicionar_receita' %}"><button>Adicionar Receita</button></a>
+            </div>
     </section>
-    
-       
-        
-        <!-- Formulário de sugestão 
-        <form id="sugestaoForm">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
-    </form>
-            <label for="sugestao">Sugestão:</label>
-            <textarea id="sugestao" name="sugestao" rows="4" required></textarea>
-    
-            Botão de envio do formulário -->
-            
-        <nav>
-        
-           
-            <!-- Adicione mais conforme necessário -->
-        
-    </nav>
-
-   <!-- <section class="recipe-container">
-        <div class="recipe">
-            <h2>Pão de Batata</h2>
-        </div>
-    </section> -->
-
     <footer>
         <p>&copy; 2024 Catálogo de Receitas</p>
             <p> Feito por André</p>
             <section id="sugestoes">
         <h2>Deixe sua Sugestão abaixo</h2>
-            <button id="sugestao" type="submit"><a href="https://forms.gle/PKEHuBzvx3Nyd5VL8">Clique para preencher o formulário</a></button>
+            <button id="sugestao" type="submit"><a href="{% url 'sugestao' %}">Clique para preencher o formulário</a></button>
         
     </section>
     </footer>
