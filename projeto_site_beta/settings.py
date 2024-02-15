@@ -20,10 +20,14 @@ BASE_DIR = Path('/user/Androlassss/receitas-androlas-beta/receitas/templates/').
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-*ghamo5de9qulbt%vvc&%ft@$@qi3#ks0z4dfl^kl-_2p2uhje'
+
+
+
+SECRET_KEY = os.environ.get('SECRETKEY')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG =
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'androlassss.pythonanywhere.com',

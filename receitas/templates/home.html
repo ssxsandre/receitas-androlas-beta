@@ -141,6 +141,27 @@
 #sugestoes {
     align-items: center;
 }
+#adicionar-receita-button {
+    text-align: center;
+    margin: 20px auto;
+}
+
+#adicionar-receita-button button {
+    background-color: #f55b47;
+    border: none;
+    border-radius: 8px;
+    color: #000000;
+    padding: 10px 20px;
+    font-size: larger;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+
+#adicionar-receita-button a {
+    text-decoration: none;
+    color: #000000;
+    }
     </style>
     <title>Catálogo de Receitas</title>
 
@@ -152,6 +173,7 @@
         <a href="#descricao">Sobre o catálogo</a>
         <a href="#image-section">Imagens</a>
         <a href="#receitas">Acesso às receitas</a>
+
 
 
 
@@ -184,9 +206,11 @@
         </nav>
         </section>-->
 
+
+</header>
+
     <section id="descricao">
         <h1>O que é esse catálogo?</h1>
-        <!--<p>Esse catálogo é uma lista das receitas que reuni e separei para compartilhar com vocês. </p>-->
         <p>
             Este catálogo é uma coleção dedicada de receitas caseiras que compilei especialmente para compartilhar com vocês.
             Explore uma variedade encantadora de pratos, desde diversos tipos de pães até bolos irresistíveis e panquecas deliciosas. Cada receita é uma jornada pela culinária caseira,
@@ -241,7 +265,13 @@
             deliciar com o passo a passo de cada receita. Inspire-se na arte da culinária caseira e descubra sabores únicos ao alcance de um
             clique!</h3>
             <a id="botaoacesso" href="/receitas/acesso">Acesso às receitas</a>
+            <br>
+            <br>
+            <div id="adicionar-receita-button">
+                <a href="{% url 'adicionar_receita' %}"><button>Adicionar Receita</button></a>
+            </div>
     </section>
+<<<<<<< HEAD
 
 
 
@@ -268,13 +298,20 @@
         </div>
     </section> -->
 
+=======
+>>>>>>> 0b6c4a259d235de903b0288a8b5acf29c0359876
     <footer>
         <p>&copy; 2024 Catálogo de Receitas</p>
             <p> Feito por André</p>
             <section id="sugestoes">
         <h2>Deixe sua Sugestão abaixo</h2>
+<<<<<<< HEAD
             <button id="sugestao" type="submit"><a href="https://forms.gle/PKEHuBzvx3Nyd5VL8">Clique para preencher o formulário</a></button>
 
+=======
+            <button id="sugestao" type="submit"><a href="{% url 'sugestao' %}">Clique para preencher o formulário</a></button>
+
+>>>>>>> 0b6c4a259d235de903b0288a8b5acf29c0359876
     </section>
     </footer>
 
