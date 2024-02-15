@@ -4,16 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+<link rel="shortcut icon"
+    type="image/x-icon"
+    href="https://cdn.glitch.global/3c687421-679e-41f8-bbe5-a45b11c4f3d4/logosite1.jpeg?v=1708026606803">
     <style>
         *{
             padding: 0%;
-            
+
             font-family: Arial, Helvetica, sans-serif;
             margin: 0%;
         }
         body {
-            
+
            border: 0%;
            padding: 0%;
         }
@@ -22,14 +24,14 @@
             text-align: center;
             background-color: #FF9A6C;
             padding: 5em;
-            
+
         }
 
         #receitas {
             background-color:#f8ae8b;
             padding: 1em;
             text-align: center;
-            margin: auto;  
+            margin: auto;
 
         }
 
@@ -37,12 +39,12 @@
             list-style: none;
             padding: 0;
             margin: 0;
-            
+
         }
-        
+
         #receitas ul li {
             margin-bottom: 10px;
-            
+
         }
 
         #receitas ul li a {
@@ -59,10 +61,10 @@
             position: relative;
         }
 
-       
+
         footer {
             text-align: center;
-            
+
             background-color: #ff8373;
             padding: 1em;
             width: auto;
@@ -76,30 +78,64 @@
             border-radius: 8px;
             color: #000000;
             padding: 5px 7px;
-            font-size: larger;  
+            font-size: larger;
             margin: 5px;
             cursor: pointer;
-            
+
 }
 
 #portal a {
     text-decoration: none;
     color: #000000;
 }
+#logout a {
+    text-decoration: none;
+    color: #000000;
+}
+#logou ul li a {
+    text-decoration: none;
+            color: black;
+            background-color: #f55b47;
+            box-shadow: 0 0 3rem #f55b47;
+            padding: 8px 16px;
+            border-radius: 5px;
+            display: block;
+            font-size: x-large;
+            max-width: 600px;
+            margin: auto;
+            position: relative;
+}
+#logout {
+    background-color:#f8ae8b;
+            padding: 1em;
+            text-align: left;
+            margin: auto;
+}
+#logou ul {
+    list-style: none;
+            padding: 0;
+            margin: 0;
+}
     </style>
     <title>Acesso às Receitas</title>
 </head>
 <body>
     <header>
+
+
+
         <h1>Acesso às Receitas</h1>
-        <h2>Se você chegou até aqui, é porque está prestes a desvendar o delicioso 
-            universo das nossas receitas! Prepare-se para uma jornada 
-            gastronômica repleta de sabores irresistíveis. Clique nos links abaixo e 
-            deixe-se guiar pelo passo a 
-            passo de cada prato. Afinal, a arte da culinária está a apenas um clique de 
+        <h2>Se você chegou até aqui, é porque está prestes a desvendar o delicioso
+            universo das nossas receitas! Prepare-se para uma jornada
+            gastronômica repleta de sabores irresistíveis. Clique nos links abaixo e
+            deixe-se guiar pelo passo a
+            passo de cada prato. Afinal, a arte da culinária está a apenas um clique de
             distância. Bom apetite e aproveite cada descoberta!</h2>
+
     </header>
 
+
+</nav>
     <nav id="receitas">
         <ul>
             <li><a href="{% url 'receita1' %}">Pão de batata</a></li>
@@ -124,7 +160,7 @@
             <li><a href="{% url 'receita20' %}">Donuts</a></li>
             <li><a href="{% url 'receita21' %}">Sorvete de Ninho trufado</a></li>
             <li><a href="{% url 'receita22' %}">Pastel de forno</a></li>
-
+            <li><a href="{% url 'receita23' %}">Massa para salgados de forno</a></li>
         </ul>
     </nav>
 

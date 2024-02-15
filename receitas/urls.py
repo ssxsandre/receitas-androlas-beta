@@ -1,7 +1,8 @@
 from django.urls import path
 from . import views
+from receitas.views import pagina_inicial
 
-urlpatterns = [ 
+urlpatterns = [
     path('home/', views.home, name="home"),
     path('acesso/', views.acesso, name="acesso"),
     path('adicionar/', views.adicionar_receita, name='adicionar_receita'),
@@ -28,4 +29,6 @@ urlpatterns = [
     path('receita20/', views.receita20, name='receita20'),
     path('receita21/', views.receita21, name='receita21'),
     path('receita22/', views.receita22, name='receita22'),
+    path('receita23/', views.receita23, name='receita23'),
+    path('', pagina_inicial, name='pagina_inicial'),
 ]

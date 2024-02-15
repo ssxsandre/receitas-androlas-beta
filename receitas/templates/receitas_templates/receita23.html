@@ -1,0 +1,63 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Massa para salgados de forno</title>
+    <link rel="shortcut icon"
+    type="image/x-icon"
+    href="https://cdn.glitch.global/3c687421-679e-41f8-bbe5-a45b11c4f3d4/logosite1.jpeg?v=1708026606803">
+    </head>
+<body>
+    <header>
+        <h2>Catálogo de Receitas</h2>
+        <h2>Feito por André</h2>
+        <h1>Massa para salgados de forno:</h1>
+    </header>
+
+    <section class="recipe-ingredients">
+        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/Enroladinho.jpg?v=1708031650085" alt="Salgado de forno">
+        <div>
+            <h2>Ingredientes:</h2>
+
+         <ul>
+        <li>1 ovo</li>
+        <li>2 colheres (sopa) de açúcar</li>
+        <li>2 colheres (sopa) de azeite</li>
+        <li><sup>1</sup>/<sub>2</sub> colher (sopa) de sal</li>
+        <li>300mL de água morna</li>
+        <li>Farinha de Trigo até dar o ponto</li>
+        <li>1 pacote (10g) de fermento biológico seco</li>
+        <li>1 gema para pincelar</li>
+    </ul>
+        </div>
+        <div>
+            <h2>Modo de Preparo:</h2>
+       <ol>
+        <li>Em uma vasilha, misture a água morna com o açúcar, sal e fermento.</li>
+        <li>Adicione o azeite e o ovo e misture.</li>
+        <li>Adicione a água morna e vá adicionando a farinha de trigo até dar o ponto.</li>
+         <li>Sove até ficar lisa e homogênea.</li>
+         <li>Deixe descansar por 30 a 45 minutos.</li>
+            <li>Abra a masssa com um rolo e corte no formato do salgado desejado.</li>
+            <li>Pincele uma gema e leve para assar em uma assadeira untada e enfarinhada,
+                em forno pré-aquecido à 200°  até ficar dourado.</li>
+            <li>Retire do forno e sirva.</li>
+        </ol>
+        </div>
+    </section>
+ <footer>
+        <p>&copy; 2024 Catálogo de Receitas</p>
+        <p>Feito por André</p>
+   <div class="related-recipes">
+
+        <ol>
+            <p><a href="{% url 'acesso' %}" >Voltar para a Tela Inicial</a></p>
+        </ol>
+    </div>
+
+
+           </footer>
+</body>
+</html>
