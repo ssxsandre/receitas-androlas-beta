@@ -13,19 +13,18 @@ def home(request):
         # Se o usuário não estiver autenticado e não estiver na página de login,
         # redirecione para a página de login
         return render(request, 'home.html')
-    
+
 def acesso(request):
     if not request.user.is_authenticated:
-        # Se o usuário estiver autenticado, renderize a página inicial de receitas
-        return redirect('/usuarios/logar')
-    else:
-        # Se o usuário não estiver autenticado e não estiver na página de login,
-        # redirecione para a página de login
+        # Se o usuário não estiver autenticado, renderize a página de acesso
         return render(request, 'acesso.html')
-    
-    
+    else:
+        # Se o usuário estiver autenticado, redirecione para a página inicial de receitas
+        return redirect('home')
+
+
 def receita1(request):
-    return render(request, 'receitas_templates/receita1.html')
+    return render(request, 'https://www.pythonanywhere.com/user/Androlassss/files/home/Androlassss/receitas-androlas-beta/receitas/templates/receitas_templates/receita1.html')
 
 def receita2(request):
     return render(request, 'receitas_templates/receita2.html')

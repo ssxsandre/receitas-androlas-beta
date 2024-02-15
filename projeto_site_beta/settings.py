@@ -13,19 +13,22 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path, os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path('/user/Androlassss/receitas-androlas-beta/receitas/templates/').resolve().parent.parent
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 
+SECRET_KEY = 'django-insecure-*ghamo5de9qulbt%vvc&%ft@$@qi3#ks0z4dfl^kl-_2p2uhje'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG =
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'androlassss.pythonanywhere.com',
+]
+
 
 
 # Application definition
@@ -58,7 +61,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             os.path.join(BASE_DIR, 'templates'),
-            os.path.join(BASE_DIR, 'templates/receitas_templates'), 
+            os.path.join(BASE_DIR, 'templates/receitas_templates'),
                  ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -73,6 +76,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'projeto_site_beta.wsgi.application'
+
 
 
 # Database
@@ -123,7 +127,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'templates/static'),)
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'templates/'),)
 STATIC_ROOT = os.path.join('static')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
