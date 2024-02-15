@@ -13,7 +13,7 @@
             margin: 0%;
         }
         body {
-            background-color:#f8ae8b;
+            
            border: 0%;
            padding: 0%;
         }
@@ -58,26 +58,8 @@
             margin: auto;
             position: relative;
         }
-        #adicionar-receita-button {
-            text-align: center;
-            margin: 20px auto;
-        }
 
-        #adicionar-receita-button button {
-            background-color: #f55b47;
-            border: none;
-            border-radius: 8px;
-            color: #000000;
-            padding: 10px 20px;
-            font-size: larger;  
-            cursor: pointer;
-        }
-
-        #adicionar-receita-button a {
-            text-decoration: none;
-            color: #000000;
-        }
-
+       
         footer {
             text-align: center;
             
@@ -142,12 +124,10 @@
             <li><a href="{% url 'receita20' %}">Donuts</a></li>
             <li><a href="{% url 'receita21' %}">Sorvete de Ninho trufado</a></li>
             <li><a href="{% url 'receita22' %}">Pastel de forno</a></li>
-            <li><a href="{% url 'adicionar_receita' %}">Adicionar Receita</a></li>
+
         </ul>
     </nav>
-    <div id="adicionar-receita-button">
-        <a href="{% url 'adicionar_receita' %}"><button>Adicionar Receita</button></a>
-    </div>
+
     <footer>
         <p>&copy; 2024 Catálogo de Receitas</p>
         <br>
@@ -161,4 +141,3 @@
     </footer>
 </body>
 </html>
-
