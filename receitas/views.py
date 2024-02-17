@@ -116,6 +116,7 @@ def sugestao(request):
             return render(request, 'receitas/sugestao.html', {'form': form})
 
 
-def pagina_inicial(request):
-    return render(request, 'home.html')
+def paes(request):
+    return render(request, "paes.html")
+
 

@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from receitas.views import pagina_inicial
+
 
 urlpatterns = [
     path('home/', views.home, name="home"),
@@ -30,5 +30,5 @@ urlpatterns = [
     path('receita21/', views.receita21, name='receita21'),
     path('receita22/', views.receita22, name='receita22'),
     path('receita23/', views.receita23, name='receita23'),
-    path('', pagina_inicial, name='pagina_inicial'),
+    path('paes/', views.paes, name='paes'),
 ]

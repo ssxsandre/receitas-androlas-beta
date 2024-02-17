@@ -31,6 +31,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     'androlassss.pythonanywhere.com',
+    'localhost',
 ]
 
 
