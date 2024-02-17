@@ -121,4 +121,14 @@ def paes(request):
 
 
 
+def bolos(request):
+    return render(request, "bolos.html")
+
+def outras_sobremesas(request):
+    return render(request, "outras_sobremesas.html")
+
+def outras_massas_e_salgados(request):
+    return render(request, "outras_massas_e_salgados.html")
+
+
 

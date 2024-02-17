@@ -31,4 +31,7 @@ urlpatterns = [
     path('receita22/', views.receita22, name='receita22'),
     path('receita23/', views.receita23, name='receita23'),
     path('paes/', views.paes, name='paes'),
+    path('bolos/', views.bolos, name='bolos'),
+    path('outras_sobremesas/', views.outras_sobremesas, name='outras_sobremesas'),
+    path('outras_massas_e_salgados/', views.outras_massas_e_salgados, name='outras_massas_e_salgados'),
 ]
