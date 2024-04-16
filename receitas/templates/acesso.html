@@ -12,7 +12,8 @@
             padding: 0%;
 
             font-family: Arial, Helvetica, sans-serif;
-            margin: 0%;
+            margin: 0%
+
         }
         body {
 
@@ -88,11 +89,21 @@
     text-decoration: none;
     color: #000000;
 }
+#botao14 {
+ text-decoration:none;
+}
+#portal ul li {
+text-decoration:none;
+}
+#portal ul li a{
+ text-decoration: none;
+}
 #logout a {
     text-decoration: none;
     color: #000000;
+
 }
-#logou ul li a {
+#logout ul li a {
     text-decoration: none;
             color: black;
             background-color: #f55b47;
@@ -104,7 +115,8 @@
             max-width: 600px;
             margin: auto;
             position: relative;
-}
+
+
 #logout {
     background-color:#f8ae8b;
             padding: 1em;
@@ -144,9 +156,9 @@
             <br>
             <li><a href="{% url 'bolos' %}">Bolos</a></li>
             <br>
-            <li><a href="{% 'outras_sobremesas' %}">Outras sobremesas</a></li>
+            <li><a href="{% url 'outras_sobremesas' %}">Outras sobremesas</a></li>
             <br>
-            <li><a href="{% 'outras_massas_e_salgados' %}">Outras massas e salgados</a></li>
+            <li><a href="{% url 'outras_massas_e_salgados' %}">Outras massas e salgados</a></li>
         </ul>
     </nav>
 
