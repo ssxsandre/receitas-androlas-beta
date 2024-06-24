@@ -201,7 +201,7 @@
 
 
         </div>
-        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/pao_batata.jpg?v=1701451173346" alt="Imagem 1">
+        <!--<img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/pao_batata.jpg?v=1701451173346" alt="Imagem 1">
         <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/pao-de-forma.jpg?v=1701459247377" alt="Imagem 2">
         <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/Foccacia.jpg?v=1701459593890" alt="Imagem 3">
         <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/pao-pita.jpg?v=1701459250907" alt="Imagem 4">
@@ -227,7 +227,10 @@
         <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/donut.jpg?v=1705162233152" alt="Donuts">
         <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/sorvete.jpg?v=1705162240098" alt="Sorvete de Ninho trufado">
         <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/pastel.jpg?v=1705171156649" alt="Pastel de forno">
-        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/Enroladinho.jpg?v=1708031650085" alt="Salgado de forno">
+        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/Enroladinho.jpg?v=1708031650085" alt="Salgado de forno">-->
+        {% for receita in receitas %}
+        <a href="{% url 'exibir_receita' receita.id %}"><img src="{{ receita.imagem }}" alt"{{ receita.nome }}"></a>
+        {% endfor %}
     </section>
     <section id="receitas">
         <h3>Agora, vamos ao que realmente interessa: as receitas que vão transformar seus momentos na cozinha em experiências incríveis. Para
@@ -236,6 +239,9 @@
             clique!</h3>
             <a id="botaoacesso" href="{% url 'acesso' %}">Acesso às receitas</a>
             <br>
+            <br>
+             <a id="botaoacesso" href="/receitas/buscar">Buscar receitas</a>
+        <br>
             <br>
             <div id="adicionar-receita-button">
                 <a href="{% url 'adicionar_receita' %}"><button>Adicionar Receita</button></a>

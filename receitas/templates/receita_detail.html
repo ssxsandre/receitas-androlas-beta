@@ -1,0 +1,116 @@
+<!-- templates/receita_detail.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ receita.nome }}</title>
+    <style>
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6; /* Ajustando o espaçamento entre as linhas */
+    margin: 0; /* Removendo a margem padrão do body */
+    background-color: papayawhip;
+}
+
+header {
+    text-align: center;
+    background-color: darkorange;
+    padding: 1em;
+}
+
+.recipe-ingredients {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 20px auto;
+    align-items: center; /* Centralizando verticalmente */
+}
+
+.recipe-ingredients img {
+    max-width: 100%; /* Ajustando a largura máxima */
+    height: auto;
+    margin: auto;
+    margin-right: 20px;
+
+}
+
+.recipe-ingredients div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+.recipe-ingredients
+.recipe-ingredients div h2 {
+    margin-bottom: 10px;
+    font-size: 32px; /* Aumentando o tamanho da fonte */
+}
+
+.recipe-ingredients div ul,
+.recipe-ingredients div ol,
+.recipe-ingredients div li,
+.recipe-ingredients div p {
+    font-size: 24px; /* Ajustando o tamanho da fonte */
+    margin: 0;
+    list-style-type: none;
+
+}
+
+.recipe-ingredients div div {
+    display: flex;
+    margin-top: 10px;
+
+}
+
+
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    background-color: papayawhip;
+    padding: 1em;
+    width: 100%;
+    font-size: 25px;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>{{ receita.nome }}</h1>
+        <p><strong>Categoria:</strong> {{ receita.categoria.nome }}</p>
+    </header>
+    <section class="recipe-ingredients">
+    <div>
+    <img src="{{ receita.imagem }}" alt="{{ receita.nome }}">
+    <h2>Ingredientes</h2>
+    <ul>
+        {% for ingrediente in ingredientes %}
+            <li><pre>{{ ingrediente }}</pre></li>
+        {% endfor %}
+    </ul>
+</div>
+<div>
+    <h2>Modo de Preparo</h2>
+    <p>{{ receita.modo_preparo }}</p>
+    </div>
+
+    {% if receita.nome_pessoa %}
+    <h2>Informações Adicionais
+    <br>
+        Receita enviada por:
+    </h2>
+        <h2><strong>{{ receita.nome_pessoa }}</strong></h2>
+    {% endif %}
+    {% if receita.email %}
+        <h2><strong>{{ receita.email }}</strong></h2>
+    {% endif %}
+    </section>
+    <footer>
+        <p>&copy; 2023 Catálogo de Receitas</p>
+   <p>Feito por André</p>
+      <p><a href="/receitas/acesso" class="back-to-home">Voltar para a Tela Inicial</a></p>
+           </footer>
+</body>
+</html>

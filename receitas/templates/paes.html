@@ -122,10 +122,10 @@
 <body>
     <header>
         <h1>Acesso às Receitas de pães</h1>
-        <h2>Descubra uma variedade de receitas deliciosas de 
-            pães fresquinhos que vão desde clássicos tradicionais 
-            até criações inovadoras. De pães simples para o café da manhã 
-            até opções mais elaboradas para acompanhar suas refeições, explore 
+        <h2>Descubra uma variedade de receitas deliciosas de
+            pães fresquinhos que vão desde clássicos tradicionais
+            até criações inovadoras. De pães simples para o café da manhã
+            até opções mais elaboradas para acompanhar suas refeições, explore
             uma infinidade de sabores e texturas nesta categoria de receitas de pães!</h2>
             <p>Créditos: Desenvolvido com amor por André e inspirado pelo ChatGPT.</p>
     </header>
@@ -133,17 +133,18 @@
 
 </nav>
     <nav id="receitas">
-    
+
         <br><br><br>
-        <ul>
-            <li><a href="{% url 'receita1' %}">Pão de batata</a></li>
-            <li><a href="{% url 'receita2' %}">Pão de forma</a></li>
-            <li><a href="{% url 'receita3' %}">Foccacia</a></li>
-            <li><a href="{% url 'receita4' %}">Pão pita</a></li>
-            <li><a href="{% url 'receita10' %}">Pão francês</a></li>
-            <li><a href="{% url 'receita13' %}">Pão italiano</a></li>
-            <li><a href="{% url 'receita19' %}">Pão de cebola</a></li>
-        </ul>
+<ul>
+    <li><a href="{% url 'exibir_receita' num_receita=1 %}">Pão de batata</a></li>
+    <li><a href="{% url 'exibir_receita' num_receita=2 %}">Pão de forma</a></li>
+    <li><a href="{% url 'exibir_receita' num_receita=3 %}">Foccacia</a></li>
+    <li><a href="{% url 'exibir_receita' num_receita=4 %}">Pão pita</a></li>
+    <li><a href="{% url 'exibir_receita' num_receita=10 %}">Pão francês</a></li>
+    <li><a href="{% url 'exibir_receita' num_receita=13 %}">Pão italiano</a></li>
+    <li><a href="{% url 'exibir_receita' num_receita=19 %}">Pão de cebola</a></li>
+</ul>
+
     </nav>
 
     <footer>

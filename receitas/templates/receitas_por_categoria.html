@@ -1,0 +1,26 @@
+<!-- receitas_por_categoria.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Receitas da Categoria {{ categoria.nome }}</title>
+</head>
+<body>
+    <h1>Receitas da Categoria {{ categoria.nome }}</h1>
+
+    <ul>
+        {% for receita in receitas %}
+            <li>
+                <h2>{{ receita.nome }}</h2>
+                <p><strong>Ingredientes:</strong> {{ receita.ingredientes }}</p>
+                <p><strong>Modo de Preparo:</strong> {{ receita.modo_preparo }}</p>
+                <p><strong>Categoria:</strong> {{ receita.categoria }}</p>
+                <p><strong>Enviado por:</strong> {{ receita.nome_pessoa }}</p>
+                <p><strong>Email:</strong> {{ receita.email }}</p>
+            </li>
+        {% empty %}
+            <li>Nenhuma receita encontrada para esta categoria.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -122,10 +122,10 @@
 <body>
     <header>
         <h1>Acesso às Receitas de pães</h1>
-        <h2>De bolos simples e reconfortantes a sobremesas elegantes e sofisticadas, 
+        <h2>De bolos simples e reconfortantes a sobremesas elegantes e sofisticadas,
             esta categoria oferece uma ampla seleção de receitas para satisfazer os mais
-             diversos paladares. Desde bolos clássicos, como bolo de chocolate e bolo de 
-             laranja, até opções mais exóticas, como bolo indiano e bolo amélia, você encontrará 
+             diversos paladares. Desde bolos clássicos, como bolo de chocolate e bolo de
+             laranja, até opções mais exóticas, como bolo indiano e bolo amélia, você encontrará
              inspiração para todas as ocasiões nesta coleção de receitas de bolos!</h2>
             <p>Créditos: Desenvolvido com amor por André e inspirado pelo ChatGPT.</p>
     </header>
@@ -133,17 +133,19 @@
 
 </nav>
     <nav id="receitas">
-    
+
         <br><br><br>
-        <ul>
-            <li><a href="{% url 'receita5' %}">Bolo de chocolate</a></li>
-            <li><a href="{% url 'receita6' %}">Bolo de cenoura</a></li>
-            <li><a href="{% url 'receita7' %}">Bolo de banana</a></li>
-            <li><a href="{% url 'receita8' %}">Bolo de limão</a></li>
-            <li><a href="{% url 'receita14' %}">Bolo de laranja</a></li>
-            <li><a href="{% url 'receita17' %}">Bolo indiano</a></li>
-            <li><a href="{% url 'receita18' %}">Bolo amélia</a></li>
-        </ul>
+
+<ul>
+    <li><a href="{% url 'exibir_receita' num_receita=5 %}">Bolo de chocolate</a></li>
+    <li><a href="{% url 'exibir_receita' num_receita=6 %}">Bolo de cenoura</a></li>
+    <li><a href="{% url 'exibir_receita' num_receita=7 %}">Bolo de banana</a></li>
+    <li><a href="{% url 'exibir_receita' num_receita=8 %}">Bolo de limão</a></li>
+    <li><a href="{% url 'exibir_receita' num_receita=14 %}">Bolo de laranja</a></li>
+    <li><a href="{% url 'exibir_receita' num_receita=17 %}">Bolo indiano</a></li>
+    <li><a href="{% url 'exibir_receita' num_receita=18 %}">Bolo amélia</a></li>
+</ul>
+
     </nav>
 
     <footer>
