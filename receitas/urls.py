@@ -14,4 +14,5 @@ urlpatterns = [
     path('categoria/<int:categoria_id>/', views.receitas_por_categoria, name='receitas_por_categoria'),
     path('buscar/', views.buscar_receitas, name='buscar_receitas'),
     path('receita<int:num_receita>/', views.exibir_receita, name='exibir_receita'),
+
 ]

@@ -1,52 +1,38 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon"
-    type="image/x-icon"
-    href="https://cdn.glitch.global/3c687421-679e-41f8-bbe5-a45b11c4f3d4/logosite1.jpeg?v=1708026606803">
+    <link rel="shortcut icon" type="image/x-icon" href="https://cdn.glitch.global/3c687421-679e-41f8-bbe5-a45b11c4f3d4/logosite1.jpeg?v=1708026606803">
     <style>
-        *{
-            padding: 0%;
-
+        * {
+            padding: 0;
             font-family: Arial, Helvetica, sans-serif;
-            margin: 0%;
+            margin: 0;
         }
         body {
-
-           border: 0%;
-           padding: 0%;
+            border: 0;
+            padding: 0;
         }
-
         header {
             text-align: center;
             background-color: #FF9A6C;
             padding: 5em;
-
         }
-
         #receitas {
             background-color:#f8ae8b;
             padding: 1em;
             text-align: center;
             margin: auto;
-
         }
-
         #receitas ul {
             list-style: none;
             padding: 0;
             margin: 0;
-
         }
-
         #receitas ul li {
             margin-bottom: 10px;
-
         }
-
         #receitas ul li a {
             text-decoration: none;
             color: black;
@@ -60,17 +46,13 @@
             margin: auto;
             position: relative;
         }
-
-
         footer {
             text-align: center;
-
             background-color: #ff8373;
             padding: 1em;
             width: auto;
-            border: 0%;
+            border: 0;
             font-weight: 700;
-
         }
         #portal button {
             background-color: #f55b47;
@@ -81,19 +63,17 @@
             font-size: larger;
             margin: 5px;
             cursor: pointer;
-
-}
-
-#portal a {
-    text-decoration: none;
-    color: #000000;
-}
-#logout a {
-    text-decoration: none;
-    color: #000000;
-}
-#logou ul li a {
-    text-decoration: none;
+        }
+        #portal a {
+            text-decoration: none;
+            color: #000000;
+        }
+        #logout a {
+            text-decoration: none;
+            color: #000000;
+        }
+        #logou ul li a {
+            text-decoration: none;
             color: black;
             background-color: #f55b47;
             box-shadow: 0 0 3rem #f55b47;
@@ -104,61 +84,50 @@
             max-width: 600px;
             margin: auto;
             position: relative;
-}
-#logout {
-    background-color:#f8ae8b;
+        }
+        #logout {
+            background-color:#f8ae8b;
             padding: 1em;
             text-align: left;
             margin: auto;
-}
-#logou ul {
-    list-style: none;
+        }
+        #logou ul {
+            list-style: none;
             padding: 0;
             margin: 0;
-}
+        }
     </style>
     <title>Acesso às Receitas</title>
 </head>
 <body>
     <header>
-        <h1>Acesso às Receitas de pães</h1>
+        <h1>Acesso às Receitas de Bolos</h1>
         <h2>De bolos simples e reconfortantes a sobremesas elegantes e sofisticadas,
             esta categoria oferece uma ampla seleção de receitas para satisfazer os mais
              diversos paladares. Desde bolos clássicos, como bolo de chocolate e bolo de
              laranja, até opções mais exóticas, como bolo indiano e bolo amélia, você encontrará
              inspiração para todas as ocasiões nesta coleção de receitas de bolos!</h2>
-            <p>Créditos: Desenvolvido com amor por André e inspirado pelo ChatGPT.</p>
+        <p>Créditos: Desenvolvido com amor por André e inspirado pelo ChatGPT.</p>
     </header>
 
-
-</nav>
     <nav id="receitas">
+        <ul>
+            {% for receita in receitas %}
+            <li><a href="{% url 'exibir_receita' num_receita=receita.id %}">{{ receita.nome }}</a></li>
+            {% endfor %}
 
-        <br><br><br>
-
-<ul>
-    <li><a href="{% url 'exibir_receita' num_receita=5 %}">Bolo de chocolate</a></li>
-    <li><a href="{% url 'exibir_receita' num_receita=6 %}">Bolo de cenoura</a></li>
-    <li><a href="{% url 'exibir_receita' num_receita=7 %}">Bolo de banana</a></li>
-    <li><a href="{% url 'exibir_receita' num_receita=8 %}">Bolo de limão</a></li>
-    <li><a href="{% url 'exibir_receita' num_receita=14 %}">Bolo de laranja</a></li>
-    <li><a href="{% url 'exibir_receita' num_receita=17 %}">Bolo indiano</a></li>
-    <li><a href="{% url 'exibir_receita' num_receita=18 %}">Bolo amélia</a></li>
-</ul>
-
+        </ul>
     </nav>
 
     <footer>
         <p>&copy; 2024 Catálogo de Receitas</p>
-        <br>
-            <p> Feito por André</p>
-            <p>Versão do Projeto: 1.0.0</p>
-            <nav id="portal">
-        <ul>
-            <br>
-        <li><button id="botao14" type="submit"><a href="/receitas/acesso">Retorne ao catálogo</a></button></li>
-        </ul>
-    </nav>
+        <p>Feito por André</p>
+        <p>Versão do Projeto: 1.0.0</p>
+        <nav id="portal">
+            <ul>
+                <li><button id="botao14" type="submit"><a href="/receitas/acesso">Retorne ao catálogo</a></button></li>
+            </ul>
+        </nav>
     </footer>
 </body>
 </html>

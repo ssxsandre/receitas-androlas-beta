@@ -12,6 +12,31 @@
     type="image/x-icon"
     href="https://cdn.glitch.global/3c687421-679e-41f8-bbe5-a45b11c4f3d4/logosite1.jpeg?v=1708026606803">
     <style>
+    body.dark-mode {
+    background-color: #000000;
+    color: #D3D3D3;
+}
+
+header.dark-mode {
+    background-color: #000000;
+}
+
+footer.dark-mode {
+    background-color: #000000;
+}
+
+section.dark-mode {
+    background-color: #000000;
+}
+
+button.dark-mode {
+    background-color: #444444;
+    color: #FFFFFF;
+}
+
+a.dark-mode {
+    color: #1E90FF;
+}
         * {
             box-sizing: border-box;
             font-family: 'Montserrat', serif;
@@ -162,6 +187,7 @@
     text-decoration: none;
     color: #000000;
     }
+
     </style>
     <title>Catálogo de Receitas</title>
 
@@ -178,9 +204,31 @@
 
 
 </header>
-</header>
+
 
     <section id="descricao">
+<button id="toggle-dark-mode-button" onclick="toggleDarkMode()">Alternar Modo Escuro</button>
+</section>
+
+<script>
+var toggleButton = document.querySelector('#toggle-dark-mode-button');
+    function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    document.querySelector('header').classList.toggle('dark-mode');
+    document.querySelector('footer').classList.toggle('dark-mode');
+    document.querySelectorAll('section').forEach(section => section.classList.toggle('dark-mode'));
+    document.querySelectorAll('button').forEach(btn => btn.classList.toggle('dark-mode'));
+    document.querySelectorAll('a').forEach(link => link.classList.toggle('dark-mode'));
+}
+if (body.classList.contains('dark-mode')) {
+            toggleButton.textContent = 'Mudar para o modo claro';
+        } else {
+            toggleButton.textContent = 'Mudar para o modo escuro';
+        }
+    }
+</script>
+
+
         <h1>O que é esse catálogo?</h1>
         <p>
             Este catálogo é uma coleção dedicada de receitas caseiras que compilei especialmente para compartilhar com vocês.
@@ -201,33 +249,6 @@
 
 
         </div>
-        <!--<img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/pao_batata.jpg?v=1701451173346" alt="Imagem 1">
-        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/pao-de-forma.jpg?v=1701459247377" alt="Imagem 2">
-        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/Foccacia.jpg?v=1701459593890" alt="Imagem 3">
-        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/pao-pita.jpg?v=1701459250907" alt="Imagem 4">
-        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/bolo-chocolate.jpg?v=1701459590388" alt="Imagem 5">
-        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/bolo-cenoura.jpg?v=1701459583403" alt="Imagem 6">
-
-        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/bolo-banana.jpg?v=1701459587462" alt="Imagem 7">
-        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/bolo-limao.jpg?v=1701533159550" alt="Imagem 8">
-        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/pizza2.jpg?v=1701559891097" alt="Imagem 9">
-        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/pao-frances.jpg?v=1701560903783" alt="Imagem 10">
-        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/panqueca.jpg?v=1701561496436" alt="Imagem 11">
-
-
-        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/panqueca-americana.jpg?v=1701561972696" alt="Imagem 12">
-
-        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/pao-italiano.jpg?v=1701721270264" alt="Imagem 13">
-        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/91896822_168757634249882_6340592912128928891_n.jpg?v=1704399498272" alt="Imagem 14">
-        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/cookie.jpg?v=1705162163081" alt="Imagem 15">
-        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/brownie.jpeg?v=1705162177053" alt="Brownie">
-        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/bolo-indiano.jpg?v=1705162187574" alt="Bolo indiano">
-        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/bolo-amelia.jpg?v=1705162196798" alt="Bolo amélia">
-        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/pao-de-cebola.jpeg?v=1705162216736" alt="Pão de cebola">
-        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/donut.jpg?v=1705162233152" alt="Donuts">
-        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/sorvete.jpg?v=1705162240098" alt="Sorvete de Ninho trufado">
-        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/pastel.jpg?v=1705171156649" alt="Pastel de forno">
-        <img src="https://cdn.glitch.global/6848f9dd-8b39-48fd-a864-6491a1469f79/Enroladinho.jpg?v=1708031650085" alt="Salgado de forno">-->
         {% for receita in receitas %}
         <a href="{% url 'exibir_receita' receita.id %}"><img src="{{ receita.imagem }}" alt"{{ receita.nome }}"></a>
         {% endfor %}
