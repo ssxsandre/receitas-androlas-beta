@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'receitas/css/home.css' %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap">
     <link rel="shortcut icon" type="image/x-icon" href="https://cdn.glitch.global/3c687421-679e-41f8-bbe5-a45b11c4f3d4/logosite1.jpeg?v=1708026606803">
     <title>Catálogo de Receitas</title>
@@ -23,7 +23,7 @@
 
     <section id="descricao">
         <button id="toggle-dark-mode-button" onclick="toggleDarkMode()">Alternar Modo Escuro</button>
-        <script src="{% static 'js/home.js' %}"></script>
+        <script src="{% static 'receitas/js/home.js' %}"></script>
 
         <h1>O que é esse catálogo?</h1>
         <p>
@@ -50,7 +50,7 @@
         </div>
 
         {% for receita in receitas %}
-        <a href="{% url 'exibir_receita' receita.id %}"><img src="{{ receita.imagem }}" alt="{{ receita.nome }}"></a>
+            <a href="{% url 'exibir_receita' receita.id %}"><img src="{{ receita.imagem }}" alt="{{ receita.nome }}"></a>
         {% endfor %}
     </section>
 
