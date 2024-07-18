@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
-from pathlib import Path, os
+import os.path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -22,7 +22,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 
 
-
 SECRET_KEY = 'SECRETKEY'
 
 
@@ -32,8 +31,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'androlassss.pythonanywhere.com',
     'localhost',
+    '127.0.0.1'
 ]
-
 
 
 # Application definition
@@ -67,7 +66,7 @@ TEMPLATES = [
         'DIRS': [
             os.path.join(BASE_DIR, 'templates'),
             os.path.join(BASE_DIR, 'templates/receitas_templates'),
-                 ],
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -81,7 +80,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'projeto_site_beta.wsgi.application'
-
 
 
 # Database
@@ -139,7 +137,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = [
-    #os.path.join(BASE_DIR, 'receitas', 'templates', 'receitas_templates'),
+    # os.path.join(BASE_DIR, 'receitas', 'templates', 'receitas_templates'),
+    os.path.join(BASE_DIR, 'static')
 ]
 
 
@@ -147,5 +146,3 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-

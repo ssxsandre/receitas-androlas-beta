@@ -1,285 +1,84 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+{% load static %}
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link rel="stylesheet" href="style.css">-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="shortcut icon"
-    type="image/x-icon"
-    href="https://cdn.glitch.global/3c687421-679e-41f8-bbe5-a45b11c4f3d4/logosite1.jpeg?v=1708026606803">
-    <style>
-    body.dark-mode {
-    background-color: #000000;
-    color: #D3D3D3;
-}
-
-header.dark-mode {
-    background-color: #000000;
-}
-
-footer.dark-mode {
-    background-color: #000000;
-}
-
-section.dark-mode {
-    background-color: #000000;
-}
-
-button.dark-mode {
-    background-color: #444444;
-    color: #FFFFFF;
-}
-
-a.dark-mode {
-    color: #1E90FF;
-}
-        * {
-            box-sizing: border-box;
-            font-family: 'Montserrat', serif;
-        }
-
-        body {
-            font-family: 'Arial', serif;
-            background-color: #e4c333;
-        }
-        header {
-            text-align: center;
-            background-color: #FF9A6C;
-            display: flex;
-            align-items: left;
-            justify-content: space-between;
-            padding-left: 80px;
-            padding-right: 80px;
-            padding-top: 4px;
-            padding-bottom: 24px;
-        }
-
-            header h1 {
-                margin-bottom: 8px;
-            }
-
-            header a {
-                color: #FFFFFF;
-                font-weight: 600;
-                /*topo, direita, baixo, esquerda*/
-                padding: 40px 0px 0px 0px;
-                text-decoration: none;
-                font-size: large;
-            }
-
-        #sugestao {
-            background-color: #FF725E;
-            border: none;
-            border-radius: 8px;
-            color: #FFFFFF;
-            padding: 5px 4px;
-            font-size: 20px;
-            margin: 5px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-            #image-section {
-                display: flex;
-                justify-content: space-around;
-                align-items: flex-start;
-                flex-wrap: wrap;
-                background-color: #ff6600;
-                padding: 20px 0px 1px 2px;
-                margin-top: 20px; /* Adiciona espaço entre o título e as imagens */
-            }
-
-            #image-section img {
-                width: 160px;
-                max-width: 160px;
-                height: 160px;
-                max-height: 160px;
-                border-radius: 8px;
-                margin-bottom: 10px; /* Adiciona espaço entre as imagens */
-            }
-            #descricao{
-                font-weight: 800;
-            }
-            .header-link {
-    color: #FFFFFF;
-    font-weight: 600;
-    /*topo, direita, baixo, esquerda*/
-    padding: 40px 0px 0px 0px;
-    text-decoration: none;
-    font-size: large;
-    display: block;
-    margin-bottom: 20px; /* Adicione uma margem inferior para espaçamento entre os botões */
-}
-
-
-       /* #menu ul {
-            list-style: none;
-        }
-        #menu2 ul {
-            list-style: none;
-        }*/
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            background-color: #e4c333;
-            padding: 1px 1px 1px 1px;
-            width: 100%;
-        }
-        #botaoacesso {
-
-            background-color: #f55b47;
-            border: none;
-            border-radius: 8px;
-            color: #000000;
-            /*topo, direita, baixo, esquerda*/
-            padding: 5px 4px;
-            font-size: 30px;
-            font-weight: 800;
-            margin: 5px;
-            cursor: pointer;
-            text-decoration: none;
-            align-items: center;
-
-        }
-        #receitas {
-            text-align: center;
-        }
-        #sugestao button {
-            background-color: #f55b47;
-            border: none;
-            border-radius: 8px;
-            color: #000000;
-            padding: 5px 4px;
-            font-size: 20px;
-            margin: 5px;
-            cursor: pointer;
-}
-
-#sugestao a {
-    text-decoration: none;
-    color: #000000;
-    font-weight: 900;
-}
-#sugestoes {
-    align-items: center;
-}
-#adicionar-receita-button {
-    text-align: center;
-    margin: 20px auto;
-}
-
-#adicionar-receita-button button {
-    background-color: #f55b47;
-    border: none;
-    border-radius: 8px;
-    color: #000000;
-    padding: 10px 20px;
-    font-size: larger;
-    cursor: pointer;
-    font-weight: 700;
-}
-
-
-#adicionar-receita-button a {
-    text-decoration: none;
-    color: #000000;
-    }
-
-    </style>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap">
+    <link rel="shortcut icon" type="image/x-icon" href="https://cdn.glitch.global/3c687421-679e-41f8-bbe5-a45b11c4f3d4/logosite1.jpeg?v=1708026606803">
     <title>Catálogo de Receitas</title>
-
 </head>
 
 <body>
     <header>
-        <h1>Seja bem-vindo ao meu <br>Catálogo de Receitas </h1>
+        <h1>Seja bem-vindo ao meu <br>Catálogo de Receitas</h1>
         <a href="#descricao">Sobre o catálogo</a>
         <a href="#image-section">Imagens</a>
         <a href="#receitas">Acesso às receitas</a>
-
-
-
-
-</header>
-
+    </header>
 
     <section id="descricao">
-<button id="toggle-dark-mode-button" onclick="toggleDarkMode()">Alternar Modo Escuro</button>
-</section>
-
-<script>
-var toggleButton = document.querySelector('#toggle-dark-mode-button');
-    function toggleDarkMode() {
-    document.body.classList.toggle('dark-mode');
-    document.querySelector('header').classList.toggle('dark-mode');
-    document.querySelector('footer').classList.toggle('dark-mode');
-    document.querySelectorAll('section').forEach(section => section.classList.toggle('dark-mode'));
-    document.querySelectorAll('button').forEach(btn => btn.classList.toggle('dark-mode'));
-    document.querySelectorAll('a').forEach(link => link.classList.toggle('dark-mode'));
-}
-if (body.classList.contains('dark-mode')) {
-            toggleButton.textContent = 'Mudar para o modo claro';
-        } else {
-            toggleButton.textContent = 'Mudar para o modo escuro';
-        }
-    }
-</script>
-
+        <button id="toggle-dark-mode-button" onclick="toggleDarkMode()">Alternar Modo Escuro</button>
+        <script src="{% static 'js/home.js' %}"></script>
 
         <h1>O que é esse catálogo?</h1>
         <p>
             Este catálogo é uma coleção dedicada de receitas caseiras que compilei especialmente para compartilhar com vocês.
-            Explore uma variedade encantadora de pratos, desde diversos tipos de pães até bolos irresistíveis e panquecas deliciosas. Cada receita é uma jornada pela culinária caseira,
-            oferecendo uma experiência única e cheia de sabor. Das clássicas refeições acolhedoras a deliciosas sobremesas, este catálogo é um
-            convite para transformar sua cozinha em um verdadeiro laboratório de criação gastronômica. Sinta-se em casa enquanto navega por estas
-             receitas, repletas de amor, tradição e o prazer genuíno de compartilhar momentos à mesa. <br>Bem-vindo ao meu universo culinário, onde a
-              simplicidade se transforma em algo extraordinário, proporcionando a você uma jornada única por diversos pães, bolos irresistíveis e
-               panquecas deliciosas</p>
+            Explore uma variedade encantadora de pratos, desde diversos tipos de pães até bolos irresistíveis e panquecas deliciosas.
+            Cada receita é uma jornada pela culinária caseira, oferecendo uma experiência única e cheia de sabor.
+            Das clássicas refeições acolhedoras a deliciosas sobremesas, este catálogo é um convite
+            para transformar sua cozinha em um verdadeiro laboratório de criação gastronômica.
+            Sinta-se em casa enquanto navega por estas receitas, repletas de amor, tradição e o prazer genuíno de compartilhar momentos à mesa.
+            <br>
+            Bem-vindo ao meu universo culinário, onde a simplicidade se transforma em algo extraordinário,
+            proporcionando a você uma jornada única por diversos pães, bolos irresistíveis e panquecas deliciosas
+        </p>
     </section>
 
     <section id="image-section">
         <div>
             <h1>Imagens das receitas</h1>
-            <p>Explore nosso catálogo de receitas e deixe-se tentar pelas imagens irresistíveis de pães, bolos e panquecas. Cada foto
-                é uma amostra visual do sabor caseiro que você pode trazer
-                 para a sua cozinha. Descubra inspiração culinária em cada imagem e transforme essas delícias em realidade</p>
-
-
+            <p>
+                Explore nosso catálogo de receitas e deixe-se tentar pelas imagens irresistíveis de pães, bolos e panquecas.
+                Cada foto é uma amostra visual do sabor caseiro que você pode trazer para a sua cozinha.
+                Descubra inspiração culinária em cada imagem e transforme essas delícias em realidade
+            </p>
         </div>
+
         {% for receita in receitas %}
-        <a href="{% url 'exibir_receita' receita.id %}"><img src="{{ receita.imagem }}" alt"{{ receita.nome }}"></a>
+        <a href="{% url 'exibir_receita' receita.id %}"><img src="{{ receita.imagem }}" alt="{{ receita.nome }}"></a>
         {% endfor %}
     </section>
+
     <section id="receitas">
-        <h3>Agora, vamos ao que realmente interessa: as receitas que vão transformar seus momentos na cozinha em experiências incríveis. Para
-            conferir cada detalhe delicioso, basta clicar nas imagens abaixo e se
-            deliciar com o passo a passo de cada receita. Inspire-se na arte da culinária caseira e descubra sabores únicos ao alcance de um
-            clique!</h3>
-            <a id="botaoacesso" href="{% url 'acesso' %}">Acesso às receitas</a>
-            <br>
-            <br>
-             <a id="botaoacesso" href="/receitas/buscar">Buscar receitas</a>
-        <br>
-            <br>
-            <div id="adicionar-receita-button">
-                <a href="{% url 'adicionar_receita' %}"><button>Adicionar Receita</button></a>
-            </div>
+        <h3>
+            Agora, vamos ao que realmente interessa: as receitas que vão transformar seus momentos na cozinha em experiências incríveis.
+            Para conferir cada detalhe delicioso, basta clicar nas imagens abaixo e se deliciar com o passo a passo de cada receita.
+            Inspire-se na arte da culinária caseira e descubra sabores únicos ao alcance de um clique!
+        </h3>
+
+        <br><a id="botaoacesso" href="{% url 'acesso' %}">Acesso às receitas</a><br> <!-- TODO: ID repetido -->
+
+        <br><a id="botaoacesso" href="/receitas/buscar">Buscar receitas</a><br> <!-- TODO: ID repetido -->
+
+        <div id="adicionar-receita-button">
+            <a href="{% url 'adicionar_receita' %}"><button>Adicionar Receita</button></a>
+        </div>
     </section>
+
     <footer>
         <p>&copy; 2024 Catálogo de Receitas</p>
-            <p> Feito por André</p>
-            <section id="sugestoes">
-        <h2>Deixe sua Sugestão abaixo</h2>
+        <p> Feito por André</p>
 
+        <section id="sugestoes">
+            <h2>Deixe sua Sugestão abaixo</h2>
             <button id="sugestao" type="submit"><a href="{% url 'sugestao' %}">Clique para preencher o formulário</a></button>
-
-
-    </section>
+        </section>
     </footer>
-
 
 </body>
 </html>
