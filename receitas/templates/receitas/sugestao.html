@@ -4,108 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar Receita</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #333333;
-        }
-        .container {
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #c76060;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #000000;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        label {
-            font-weight: bold;
-            margin-bottom: 8px;
-            color: #000000;
-        }
-        input[type="text"],
-        input[type="email"],
-        textarea {
-            padding: 10px;
-            margin-bottom: 20px;
-            border-radius: 4px;
-            border: 1px solid #000000;
-            font-size: 16px;
-        }
-        textarea {
-            height: 150px;
-        }
-        .button {
-            padding: 10px 20px;
-            background-color: #ff8636;
-            color: #000000;
-            border: none;
-            border-radius: 4px;
-            font-size: 16px;
-            cursor: pointer;
-            font-weight: 750;
-        }
-        .button:hover {
-            background-color: #e55d00;
-        }
-        .alert {
-            background-color: #f2dede;
-            border: 1px solid #ebccd1;
-            color: #a94442;
-            padding: 15px;
-            border-radius: 4px;
-            margin-bottom: 20px;
-        }
-        .alert-success {
-            background-color: #dff0d8;
-            border-color: #d6e9c6;
-            color: #3c763d;
-        }
-    </style>
 </head>
+
 <body>
+    <div class="container">
+        <h1>Adicionar Sugestão</h1>
 
-<div class="container">
-    <h1>Adicionar Sugestão</h1>
-    
-    {% if messages %}
-    <div class="alert alert-success">
-        {% for message in messages %}
-        <strong>Sucesso!</strong> {{ message }}
-        {% endfor %}
+        {% if messages %}
+        <div class="alert alert-success">
+            {% for message in messages %}
+                <strong>Sucesso!</strong> {{ message }}
+            {% endfor %}
+        </div>
+        {% endif %}
+
+
+        <form method="post" action="{% url 'sugestao' %}" > {% csrf_token %}
+            <label for="nome_pessoa">Seu nome:</label>
+            <input type="text" id="nome_pessoa" name="nome_pessoa" required>
+
+            <label for="assunto_sugestao">Assunto da sugestão:</label>
+            <textarea id="assunto_sugestao" name="assunto_sugestao" required></textarea>
+
+            <label for="sugestao">Insira o texto da sua sugestão:</label>
+            <textarea id="sugestao" name="sugestao" required></textarea>
+
+            <label for="email">Insira seu email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+
+            <br>
+            <button type="submit" class="button">Adicionar Sugestão</button>
+            <br>
+            <a class="button" href="/receitas/acesso" style="text-align: center">Voltar para as receitas</a>
+        </form>
     </div>
-    {% endif %}
-    
-
-    <form method="post" action="{% url 'sugestao' %}" > {% csrf_token %}
-        <label for="nome_pessoa">Seu nome:</label>
-        <input type="text" id="nome_pessoa" name="nome_pessoa" required>
-        
-        <label for="assunto_sugestao">Assunto da sugestão:</label>
-        <textarea id="assunto_sugestao" name="assunto_sugestao" required></textarea>
-        
-        <label for="sugestao">Insira o texto da sua sugestão:</label>
-        <textarea id="sugestao" name="sugestao" required></textarea>
-
-        <label for="email">Insira seu email:</label>
-        <input type="email" id="email" name="email" required>
-        
-        <br><br> 
-        <button type="submit" class="button">Adicionar Sugestão</button>
-        <br>
-        <a class="button" href="/receitas/acesso" style="text-align: center">Voltar para as receitas</a>
-    </form>
-</div>
-
 </body>
 </html>
