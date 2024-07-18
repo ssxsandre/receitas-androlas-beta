@@ -1,0 +1,104 @@
+* {
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+body {
+    border: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    background-color: #ff9a6c;
+    padding: 5em;
+}
+
+#receitas {
+    background-color: #f8ae8b;
+    padding: 1em;
+    text-align: center;
+    margin: auto;
+}
+
+#receitas ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#receitas ul li {
+    margin-bottom: 10px;
+}
+
+#receitas ul li a {
+    text-decoration: none;
+    color: black;
+    background-color: #f55b47;
+    box-shadow: 0 0 3rem #f55b47;
+    padding: 8px 16px;
+    border-radius: 5px;
+    display: block;
+    font-size: x-large;
+    max-width: 600px;
+    margin: auto;
+    position: relative;
+}
+
+footer {
+    text-align: center;
+    background-color: #ff8373;
+    padding: 1em;
+    width: auto;
+    border: 0;
+    font-weight: 700;
+}
+
+#portal button {
+    background-color: #f55b47;
+    border: none;
+    border-radius: 8px;
+    color: #000000;
+    padding: 5px 7px;
+    font-size: larger;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#portal a {
+    text-decoration: none;
+    color: #000000;
+}
+
+#logout a {
+    text-decoration: none;
+    color: #000000;
+}
+
+#logou ul li a {
+    text-decoration: none;
+    color: black;
+    background-color: #f55b47;
+    box-shadow: 0 0 3rem #f55b47;
+    padding: 8px 16px;
+    border-radius: 5px;
+    display: block;
+    font-size: x-large;
+    max-width: 600px;
+    margin: auto;
+    position: relative;
+}
+
+#logout {
+    background-color: #f8ae8b;
+    padding: 1em;
+    text-align: left;
+    margin: auto;
+}
+
+#logou ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
