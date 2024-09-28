@@ -10,6 +10,7 @@ class Receita(models.Model):
     nome = models.CharField(max_length=100)
     ingredientes = models.TextField()
     modo_preparo = models.TextField()
+    complemento_modo_preparo = models.TextField(blank=True, null=True)
     categoria = models.ForeignKey(Categoria, on_delete=models.SET_NULL, null=True, blank=True)
     email = models.EmailField(blank=True, null=True)
     nome_pessoa = models.CharField(max_length=50, blank=True, null=True)

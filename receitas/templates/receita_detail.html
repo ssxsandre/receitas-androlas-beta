@@ -94,8 +94,11 @@ footer {
 <div>
     <h2>Modo de Preparo</h2>
     <p>{{ receita.modo_preparo }}</p>
-    </div>
-
+<br><br>
+    {% if receita.complemento_modo_preparo  %}
+    <p>{{ receita.complemento_modo_preparo }}</p>
+    {% endif %}
+     </div>
     {% if receita.nome_pessoa %}
     <h2>Informações Adicionais
     <br>
@@ -108,7 +111,7 @@ footer {
     {% endif %}
     </section>
     <footer>
-        <p>&copy; 2023 Catálogo de Receitas</p>
+       <p>&copy; 2024 Sabores Caseiros</p>
    <p>Feito por Androlas</p>
       <p><a href="/receitas/acesso" class="back-to-home">Voltar para a Tela Inicial</a></p>
            </footer>
