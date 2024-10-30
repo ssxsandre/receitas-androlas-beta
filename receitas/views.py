@@ -37,6 +37,7 @@ def sugestao(request):
         if request.method == "POST":
             form = SugestaoForm(request.POST)
             if form.is_valid():
+                form.save()
                 messages.success(request,
                                 """Sugestão enviada com sucesso!
                                  Em breve o administrador irá verificar sua sugestão e tentar adicioná-la ao site!

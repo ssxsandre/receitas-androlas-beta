@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link rel="stylesheet" href="style.css">-->
+    <meta name="description" content="Um site de receitas caseiras, com mais de 30 delas sendo receitas de família"
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
     <link rel="shortcut icon"
     type="image/x-icon"
     href="https://cdn.glitch.global/3c687421-679e-41f8-bbe5-a45b11c4f3d4/logosite1.jpeg?v=1708026606803">
@@ -15,11 +15,10 @@
         * {
             box-sizing: border-box;
             font-family: 'Montserrat', serif;
-            color: #000000;
+
         }
 
         body {
-            font-family: 'Arial', serif;
             background-color: #F5F5DC;
             text-align: center;
             display: flex;
@@ -30,6 +29,7 @@
             text-align: center;
             background-color: #8B4513;
             display: flex;
+            color: white;
             flex-direction: column;
             align-items: center;
             padding: 70px 70px;
@@ -101,7 +101,21 @@
             border: none;
             border-radius: 8px;
             color: #000000;
-            padding: 5px 4px;
+            padding: 40px;
+            font-size: 30px;
+            font-weight: 800;
+            margin: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            align-items: center;
+        }
+
+        #botaobuscar {
+            background-color: #D46A6A;
+            border: none;
+            border-radius: 8px;
+            color: #000000;
+            padding: 40px;
             font-size: 30px;
             font-weight: 800;
             margin: 5px;
@@ -119,7 +133,7 @@
             border: none;
             border-radius: 8px;
             color: #000000;
-            padding: 5px 4px;
+            padding: 40px;
             font-size: 20px;
             margin: 5px;
             cursor: pointer;
@@ -129,6 +143,7 @@
             text-decoration: none;
             color: #000000;
             font-weight: 900;
+            padding: 40px;
         }
 
         #sugestoes {
@@ -138,6 +153,7 @@
         #adicionar-receita-button {
             text-align: center;
             margin: 20px auto;
+            padding: 40px;
         }
 
         #adicionar-receita-button button {
@@ -145,7 +161,7 @@
             border: none;
             border-radius: 8px;
             color: #000000;
-            padding: 10px 20px;
+            padding: 40px;
             font-size: larger;
             cursor: pointer;
             font-weight: 700;
@@ -154,10 +170,11 @@
         #adicionar-receita-button a {
             text-decoration: none;
             color: #000000;
+            padding: 40px;
         }
 
         /* Dark mode styles */
-        body.dark-mode {
+        /*body.dark-mode {
             background-color: #000000;
             color: #D3D3D3;
         }
@@ -181,7 +198,7 @@
 
         a.dark-mode {
             color: #1E90FF;
-        }
+        }*/
     </style>
     <title>Catálogo de Receitas</title>
 </head>
@@ -223,16 +240,16 @@
         {% endfor %}
     </section>
 <section id="apoie" style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin-top: 30px;">
-    <h2 style="text-align: center; color: #343a40;">Apoie Este Projeto</h2>
-    <p style="text-align: center; color: #6c757d; font-size: 16px; max-width: 600px; margin: 0 auto;">
+    <h2 style="text-align: center; color: black;">Apoie Este Projeto</h2>
+    <p style="text-align: center; color: black; font-size: 16px; max-width: 600px; margin: 0 auto;">
         Olá! Todas as receitas que você encontra aqui são preparadas com carinho, seguindo tradições de família. Se você gosta do conteúdo e quer ajudar a manter o site no ar, considere fazer uma doação. Qualquer valor é bem-vindo e será utilizado para melhorar a experiência no site e testar novas receitas.
     </p>
     <div style="text-align: center; margin-top: 20px;">
-        <p style="color: #343a40; font-weight: bold; font-size: 18px;">Chave Pix:</p>
-        <p style="color: #6c757d; font-size: 18px;">e07e3dc0-ccc4-44c7-befb-2df3fc4975d6</p>
+        <p style="color: black; font-weight: bold; font-size: 18px;">Chave Pix:</p>
+        <p style="color: black; font-size: 18px;">e07e3dc0-ccc4-44c7-befb-2df3fc4975d6</p>
         <img src="https://cdn.glitch.global/3c687421-679e-41f8-bbe5-a45b11c4f3d4/qrcode7594179862042254191_page-0001.jpg?v=1723409944788" alt="QR Code para doação via Pix" style="margin-top: 10px; max-width: 350px;">
     </div>
-    <p style="text-align: center; color: #6c757d; font-size: 14px; margin-top: 20px;">
+    <p style="text-align: center; color: black; font-size: 14px; margin-top: 20px;">
         Agradeço de coração pelo seu apoio! ❤️
     </p>
 </section>
@@ -241,9 +258,10 @@
         Inspire-se na arte da culinária caseira e descubra sabores únicos ao alcance de um
             clique!
         </h3>
+                <br><br>        <br><br>
         <a id="botaoacesso" href="{% url 'acesso' %}">Acesso às receitas</a>
-        <br><br>
-        <a id="botaoacesso" href="/receitas/buscar">Buscar receitas</a>
+        <br><br>        <br><br>        <br><br>        <br><br>        <br><br>
+        <a id="botaobuscar" href="/receitas/buscar">Buscar receitas</a>
         <br><br>
         <div id="adicionar-receita-button">
             <a href="{% url 'adicionar_receita' %}"><button>Adicionar Receita</button></a>
@@ -255,7 +273,7 @@
         <p>Feito por André</p>
         <section id="sugestoes">
             <h2>Deixe sua Sugestão abaixo</h2>
-            <button id="sugestao" type="submit"><a href="{% url 'sugestao' %}">Clique para preencher o formulário</a></button>
+            <button id="sugestao" type="submit" style="padding: 40px;"><a href="{% url 'sugestao' %}" style="padding: 40px;">Clique para preencher o formulário</a></button>
         </section>
     </footer>
 
