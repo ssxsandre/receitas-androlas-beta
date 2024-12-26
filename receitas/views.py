@@ -104,10 +104,10 @@ def exibir_categoria(request, categoria_id):
 
 def exibir_receita(request, num_receita):
     receita = get_object_or_404(Receita, id=num_receita)
-    ingredientes = receita.ingredientes.split(',')
-    modo_preparo = receita.modo_preparo.split('\n')
+    ingredientes = [ingrediente.strip() for ingrediente in receita.ingredientes.splitlines()]
+    modo_preparo = receita.modo_preparo.split('\n')   
     modo_preparo_formatado = [passo.replace('\r\n', '<br>') for passo in modo_preparo]
-
+    
     return render(request, 'receita_detail.html', {
         'receita': receita,
         'ingredientes': ingredientes,

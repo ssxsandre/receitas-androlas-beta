@@ -6,29 +6,31 @@
     <meta charset="UTF-8">
     <title>{{ receita.nome }}</title>
     <style>
-body {
+    body {
     font-family: 'Arial', sans-serif;
-    line-height: 1.6; /* Ajustando o espaçamento entre as linhas */
-    margin: 0; /* Removendo a margem padrão do body */
+    line-height: 1.6; 
+    margin: 0; 
     background-color: papayawhip;
-}
+    overflow-x: hidden;
+    max-width: 100%;
+    }
 
-header {
+    header {
     text-align: center;
     background-color: darkorange;
     padding: 1em;
-}
+    }
 
 .recipe-ingredients {
     display: flex;
     flex-direction: column;
     max-width: 800px;
     margin: 20px auto;
-    align-items: center; /* Centralizando verticalmente */
+    align-items: center; 
 }
 
 .recipe-ingredients img {
-    max-width: 100%; /* Ajustando a largura máxima */
+    max-width: 100%;
     height: auto;
     margin: auto;
     margin-right: 20px;
@@ -44,7 +46,7 @@ header {
 .recipe-ingredients
 .recipe-ingredients div h2 {
     margin-bottom: 10px;
-    font-size: 32px; /* Aumentando o tamanho da fonte */
+    font-size: 32px; 
 }
 
 .recipe-ingredients div ul,
@@ -53,8 +55,7 @@ header {
 .recipe-ingredients div p {
     font-size: 24px; /* Ajustando o tamanho da fonte */
     margin: 0;
-    list-style-type: none;
-
+    
 }
 
 .recipe-ingredients div div {
@@ -87,7 +88,7 @@ footer {
     <h2>Ingredientes</h2>
     <ul>
         {% for ingrediente in ingredientes %}
-            <li><pre>{{ ingrediente }}</pre></li>
+            <li>{{ ingrediente }}</li>
         {% endfor %}
     </ul>
 </div>
