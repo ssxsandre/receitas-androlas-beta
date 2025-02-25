@@ -5,7 +5,8 @@ from django.shortcuts import redirect
 from django.contrib import messages
 from django.contrib.messages import constants
 from django.contrib import auth
-# Create your views here.
+
+
 def cadastro(request):
     if request.method == 'GET':
         return render(request, 'cadastro.html')
@@ -29,13 +30,20 @@ def cadastro(request):
                 'Já existe um usuário com o mesmo username',
             )
             return redirect('/usuarios/cadastro')
-
+        if  User.objects.filter(email=email).exists():
+            messages.add_message(
+                request,
+                constants.ERROR,
+                'Já existe um usuário com este email',
+            )
+            return redirect('/usuarios/cadastro')
         try:
             user = User.objects.create_user(
                 username=username,
                 password=confirmar_senha,
                 email=email,
             )
+            print(f"recebido: email={email} username={username}")
             messages.add_message(
                 request, constants.SUCCESS, 'Usuário cadastrado com sucesso.'
             )

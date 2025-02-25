@@ -2,16 +2,17 @@ import os
 import django
 from django.shortcuts import redirect, render, get_object_or_404, get_list_or_404
 from django.contrib import auth, messages
-from .models import Categoria, Receita  # Importação absoluta dos modelos
+from .models import Categoria, Receita  
 from .forms import ReceitaForm, SugestaoForm
 
 def home(request):
-    receitas = Receita.objects.all()
+    receitas = Receita.objects.filter(isAproved=True)
 
     return render(request, 'home.html', {'receitas': receitas})
 
 def acesso(request):
-    return render(request, 'acesso.html')
+    categorias = Categoria.objects.all()
+    return render(request, 'acesso.html', {'categorias': categorias})
 
 def adicionar_receita(request):
     if not request.user.is_authenticated:
@@ -100,7 +101,7 @@ def receitas_por_categoria(request):
 def exibir_categoria(request, categoria_id):
     categoria = get_object_or_404(Categoria, id=categoria_id)
     receitas = Receita.objects.filter(categoria=categoria)
-    return render(request, 'categoria.html', {'categoria': categoria, 'receitas': receitas})
+    return render(request, 'acesso.html', {'categoria': categoria, 'receitas': receitas})
 
 def exibir_receita(request, num_receita):
     receita = get_object_or_404(Receita, id=num_receita)

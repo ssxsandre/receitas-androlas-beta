@@ -116,7 +116,7 @@ text-decoration:none;
             margin: auto;
             position: relative;
 
-
+}
 #logout {
     background-color:#f8ae8b;
             padding: 1em;
@@ -156,13 +156,18 @@ text-decoration:none;
         <h3>Escolha a categoria de comidas que deseja ver as receitas:</h3>
         <br><br><br>
         <ul>
-            <li><a href="{% url 'paes' %}">Pães</a></li>
+            {% for categoria in categorias %}
+            <li><a href="{% url 'exibir_categoria<int:categoria_id>' categoria.id}">{{categoria.nome}}</a></li>
+            {% empty %}
+            <li>Não há categorias disponíveis</li>
+            {% endfor %}
+           <!-- <li><a href="{% url 'paes' %}">Pães</a></li>
             <br>
             <li><a href="{% url 'bolos' %}">Bolos</a></li>
             <br>
             <li><a href="{% url 'outras_sobremesas' %}">Outras sobremesas</a></li>
             <br>
-            <li><a href="{% url 'outras_massas_e_salgados' %}">Outras massas e salgados</a></li>
+            <li><a href="{% url 'outras_massas_e_salgados' %}">Outras massas e salgados</a></li>-->
         </ul>
     </nav>
 

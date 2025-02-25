@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/65aa8d9fd8.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body {
+            background-color: #FFF9C4;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bem vindo, {{username}}!</h1>
+        <br>
+        <a href="/usuarios/password-reset/">Alterar senha</a>
+    </header>
+    <main>
+        <h2>Deseja receber atualizações do site por email?</h2>
+        <i class="fa-solid fa-xmark"></i>
+        <p>Não</p>
+        <i class="fa-solid fa-check"></i>
+        <p>Sim</p>
+        <br><br><br>
+        <h2>Suas receitas favoritas:</h2>
+        {% for receita in receitas_favoritas %}
+        <a href="{% url 'exibir_receita' receita.id %}"><img src="{{ receita.imagem }}" alt="{{ receita.nome }}"></a>
+        {% endfor %}
+    </main>
+</body>
+</html>

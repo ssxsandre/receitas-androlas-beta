@@ -11,7 +11,7 @@ urlpatterns = [
     path('bolos/', views.bolos, name='bolos'),
     path('outras_sobremesas/', views.outras_sobremesas, name='outras_sobremesas'),
     path('outras_massas_e_salgados/', views.outras_massas_e_salgados, name='outras_massas_e_salgados'),
-    path('categoria/<int:categoria_id>/', views.receitas_por_categoria, name='receitas_por_categoria'),
+    path('exibir_categoria<int:categoria_id>/', views.exibir_categoria, name='exibir_categoria'),
     path('buscar/', views.buscar_receitas, name='buscar_receitas'),
     path('receita<int:num_receita>/', views.exibir_receita, name='exibir_receita'),
 

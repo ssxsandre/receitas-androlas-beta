@@ -3,9 +3,9 @@ from .models import Receita, Categoria, Sugestao
 
 class ReceitaAdmin(admin.ModelAdmin):
     list_display = ('nome', 'categoria', 'email', 'nome_pessoa')
-    search_fields = ('nome', 'ingredientes', 'modo_preparo',  'complemento_modo_preparo')
+    search_fields = ('nome', 'ingredientes', 'modo_preparo',  'complemento_modo_preparo', 'isAproved')
     list_filter = ('categoria',)
-    fields = ('nome', 'ingredientes', 'modo_preparo',  'complemento_modo_preparo', 'categoria', 'email', 'nome_pessoa', 'imagem')
+    fields = ('nome', 'ingredientes', 'modo_preparo',  'complemento_modo_preparo', 'categoria', 'email', 'nome_pessoa', 'imagem', 'isAproved')
 
 admin.site.register(Receita, ReceitaAdmin)
 admin.site.register(Categoria)
